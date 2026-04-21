@@ -2,21 +2,21 @@
 
 function smallestElem(nums) {
   let smallest = Infinity;
-  let secondSmallest = Infinity;
+  let secSmallest = Infinity;
 
   for (let num of nums) {
     if (num < smallest) {
-      secondSmallest = smallest;
-      secondSmallest = num;
+      secSmallest =smallest
+      smallest = num
     }
-
-    if (num < secondSmallest && num !== smallest) {
-      secondSmallest = num;
+    if (num < secSmallest && num!== smallest) {
+      secSmallest = num
     }
   }
+
   return {
-    smallest:smallest,
-    secondSmallest:secondSmallest
-  };
+    secSmallest:secSmallest,
+    smallest: smallest
+  }
 }
-console.log(smallestElem([5, 3, 8, 1, 4, 2]));     
+console.log(smallestElem([11,2,3,1,-1,-44]));
